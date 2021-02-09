@@ -69,6 +69,12 @@ class Game{
         text("Player 1 :"+allPlayers.player1.score,20,90);
         text("Player 2 :"+allPlayers.player2.score,20,130);
 
+        if(allPlayers.player1.score >= 10 || allPlayers.player2.score >= 10 ){
+            
+            
+             this.end();
+        } 
+
     }
         // Give movements for the players using arrow keys
 
@@ -111,20 +117,28 @@ class Game{
                 
             }
         } 
-        if(player.score >= 10){
-            this.end();
-            
-        }     
+    
         
     }
 
     end(){
+        
         game.update(2);
         clear();
+        for(var plr in allPlayers){
+            if(allPlayers.player1.score >= 10){
+            
+                text("WINNER :"+allPlayers.player1.name,200,500)
+                }
+            if(allPlayers.player2.score >= 10){
+                
+                text("WINNER :"+allPlayers.player2.name,200,500)
+                 }
+        }
         fill("black");
         textSize(60);
         text("Game Over",350,300);
-        text(player.name,500,500)
+    
        
     }
 }
