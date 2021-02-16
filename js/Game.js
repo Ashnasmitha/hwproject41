@@ -69,7 +69,7 @@ class Game{
         text("Player 1 :"+allPlayers.player1.score,20,90);
         text("Player 2 :"+allPlayers.player2.score,20,130);
 
-        if(allPlayers.player1.score >= 10 || allPlayers.player2.score >= 10 ){
+        if(allPlayers.player1.score >= 100 || allPlayers.player2.score >= 100 ){
             
             
              this.end();
@@ -126,11 +126,11 @@ class Game{
         game.update(2);
         clear();
         for(var plr in allPlayers){
-            if(allPlayers.player1.score >= 10){
+            if(allPlayers.player1.score >= 100){
             
                 text("WINNER :"+allPlayers.player1.name,200,500)
                 }
-            if(allPlayers.player2.score >= 10){
+            if(allPlayers.player2.score >= 100){
                 
                 text("WINNER :"+allPlayers.player2.name,200,500)
                  }
